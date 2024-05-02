@@ -34,6 +34,7 @@ code {
 
 .right, .left {
   display: flex;
+  align-items: center;
 }
 
 .nadLogo {
@@ -41,11 +42,16 @@ code {
   height: auto;
 }
 
-.navItem, .spanNav {
+.navItem {
   margin: 1rem; 
 }
 
-.spanNav {
+.convert {
+  /* padding: 1rem 0; */
+  /* border: 2px solid red; */
+}
+
+.spanNav, .check {
   padding: 0.3rem;
   border: solid #876DFF;
 }
@@ -53,17 +59,33 @@ code {
 .navbtn {
   background-color: black;
   color: white;
-  border: none;
+  border: solid black;
+  box-shadow: 0 0 5px 2px rgb(95, 89, 89);
+  padding: 0.2rem;
 }
+
 .select {
   background-color: black;
   color: white;
   border: none;
 }
-.check {
-  border: solid #876DFF;
 
+.check {
+  border-top-right-radius: 0.5rem;
+  border-bottom-right-radius: 0.5rem;
+  background-color: #876DFF;
+  padding: 0.35rem 0.5rem;
 }
+
+.price {
+  font-size: smaller;
+ background-color: rgb(47, 41, 41);
+ color: white;
+ /* padding: 0.1rem; */
+ border-radius: 0.2rem;
+}
+
+
 
 /* Button */
 .btn2 {
@@ -94,8 +116,9 @@ code {
 /*  Trade */
 .bodySwap {
   display: flex;
-  width: 90%; 
+  width: 85%; 
   box-sizing: border-box; 
+  margin-top: 8rem;
 }
 
 .exp,
@@ -115,6 +138,15 @@ code {
   width: 50%;
 }
 
+.trade, .securely {
+  font-size: 60px;
+  font-weight: bolder;
+}
+
+.securely {
+  color: #876DFF;
+}
+
 .res {
   width: 80%; 
   display: flex;
@@ -125,5 +157,77 @@ code {
 
 /* Swap Tab */
 .swapTab {
+  display: flex;
+  flex-direction: column;
   background-color: #876DFF;
+  border-top-left-radius: 0.5rem;
+  border-bottom-left-radius: 0.5rem; 
+  border-top-right-radius: 1rem;
+  border-bottom-right-radius: 1rem;
+  margin: 0 4rem;
+  position: relative;
+}
+
+.layer1 {
+ background-color: rgb(47, 41, 41);
+ color: white;
+ padding: 0.3rem;
+ border-radius: 0.5rem;
+}
+
+.layer2{
+  background-color: #876DFF !important;
+}
+
+.swap {
+  display: flex;
+  justify-content: space-between;
+  margin: 0.1rem 2.7rem 0 2.7rem;
+}
+
+.tokens {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  border: 2px solid red;
+}
+
+.from, .to, .amount{
+  display: flex;
+  justify-content: space-between;
+  margin: 0 2rem;
+  background-color: black;
+  padding: 1.35rem;
+  border-radius: 0.5rem;
+  color: white;
+  /* position: relative; */
+}
+
+/* .conversion {
+  position: absolute;
+   top: 44%; 
+   left: 50%;
+  transform: translate(-50%, -50%); 
+  border: solid black;
+  border-color: black;
+  padding: 0.2rem 0.5rem;   
+  background-color: rgb(32, 26, 26); 
+} */
+
+.amount {
+  display: flex;
+  justify-content: center;
+  padding:  unset;
+  /* margin-bottom: 0.1rem; */
+  
+}
+
+.amount input{
+  border: none;
+  background-color: black;
+  padding: 1rem;
+  text-align: center;
+  color: white;
+  width: 50%;
+  
 }

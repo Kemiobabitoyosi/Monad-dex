@@ -32,7 +32,12 @@ code {
   width: 100%;
 }
 
-.right, .left {
+.hambugger_right {
+  display: none;
+}
+
+.right,
+.left {
   display: flex;
   align-items: center;
 }
@@ -43,7 +48,7 @@ code {
 }
 
 .navItem {
-  margin: 1rem; 
+  margin: 1rem;
 }
 
 .convert {
@@ -51,17 +56,20 @@ code {
   /* border: 2px solid red; */
 }
 
-.spanNav, .check {
+.spanNav,
+.check {
   padding: 0.3rem;
   border: solid #876DFF;
 }
 
 .navbtn {
   background-color: black;
-  color: white;
+  color: #876DFF;
   border: solid black;
   box-shadow: 0 0 5px 2px rgb(95, 89, 89);
-  padding: 0.2rem;
+  padding: 0.4rem;
+  cursor: pointer;
+  border-radius: 0.5rem;
 }
 
 .select {
@@ -79,10 +87,10 @@ code {
 
 .price {
   font-size: smaller;
- background-color: rgb(47, 41, 41);
- color: white;
- /* padding: 0.1rem; */
- border-radius: 0.2rem;
+  background-color: rgb(47, 41, 41);
+  color: white;
+  /* padding: 0.1rem; */
+  border-radius: 0.2rem;
 }
 
 
@@ -116,13 +124,13 @@ code {
 /*  Trade */
 .bodySwap {
   display: flex;
-  width: 85%; 
-  box-sizing: border-box; 
+  width: 85%;
+  box-sizing: border-box;
   margin-top: 8rem;
 }
 
 .exp,
-.swapTab {
+.swapTabs {
   flex: 1;
   display: flex;
   flex-direction: column;
@@ -138,7 +146,8 @@ code {
   width: 50%;
 }
 
-.trade, .securely {
+.trade,
+.securely {
   font-size: 60px;
   font-weight: bolder;
 }
@@ -148,7 +157,7 @@ code {
 }
 
 .res {
-  width: 80%; 
+  width: 80%;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -156,26 +165,35 @@ code {
 }
 
 /* Swap Tab */
+/* .swapTab {
+  display: flex;
+  background-color: #876DFF;
+  margin: 0 4rem;
+} */
+
 .swapTab {
   display: flex;
   flex-direction: column;
   background-color: #876DFF;
   border-top-left-radius: 0.5rem;
-  border-bottom-left-radius: 0.5rem; 
+  border-bottom-left-radius: 0.5rem;
   border-top-right-radius: 1rem;
   border-bottom-right-radius: 1rem;
+  /* margin: 2rem 4rem; */
   margin: 0 4rem;
+  gap: 1rem;
+  padding: 1.2rem 0;
   position: relative;
 }
 
 .layer1 {
- background-color: rgb(47, 41, 41);
- color: white;
- padding: 0.3rem;
- border-radius: 0.5rem;
+  background-color: rgb(47, 41, 41);
+  color: white;
+  padding: 0.3rem;
+  border-radius: 0.5rem;
 }
 
-.layer2{
+.layer2 {
   background-color: #876DFF !important;
 }
 
@@ -189,10 +207,12 @@ code {
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
-  border: 2px solid red;
+  /* border: 2px solid red; */
 }
 
-.from, .to, .amount{
+.from,
+.to,
+.amount {
   display: flex;
   justify-content: space-between;
   margin: 0 2rem;
@@ -203,31 +223,93 @@ code {
   /* position: relative; */
 }
 
-/* .conversion {
+.conversion {
   position: absolute;
-   top: 44%; 
-   left: 50%;
-  transform: translate(-50%, -50%); 
-  border: solid black;
-  border-color: black;
-  padding: 0.2rem 0.5rem;   
-  background-color: rgb(32, 26, 26); 
-} */
+  top: 46%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 0.1rem 0.5rem;
+  background-color: rgb(32, 26, 26);
+}
 
 .amount {
   display: flex;
   justify-content: center;
-  padding:  unset;
+  padding: unset;
   /* margin-bottom: 0.1rem; */
-  
+
 }
 
-.amount input{
+.amount input {
   border: none;
   background-color: black;
   padding: 1rem;
   text-align: center;
   color: white;
   width: 50%;
-  
+
 }
+
+/* Wallet Options */
+.walletOptionsPopup {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  color: black;
+  padding: 2rem 6rem;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  z-index: 20;
+}
+
+.popupContent {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 5rem;
+  gap: 2rem;
+}
+
+.popupContent ul {
+  text-decoration: none;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: 0 2rem;
+}
+
+.popupContent ul li {
+  margin: 2rem 0;
+  cursor: pointer;
+}
+
+
+/* Media query for smaller screens */
+/* @media screen and (max-width: 768px) {
+  .nav {
+    justify-content: flex-end;
+    padding: 1rem;
+  }
+
+  .left,
+  .right {
+    display: none;
+  }
+
+  .hambugger_right {
+    display: flex;
+    align-items: center;
+    margin-right: 1rem;
+  }
+
+  .right.show {
+    display: flex;
+    align-items: center;
+  }
+} */

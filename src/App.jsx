@@ -3,8 +3,6 @@ import Navbar from "./components/Navbar";
 import BodySwap from "./components/BodySwap";
 import React from "react";
 
-
-
 function App() {
   // const handleClick = () => {
   //   alert('Button Clicked!')
